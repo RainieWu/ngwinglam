@@ -9,8 +9,24 @@
 	margin:0;
 	padding:0;
 }
-#canvas1, #canvas2, #canvas3{
+#canvas1, #canvas2, #canvas3, #copyright{
 	position:absolute;
+}
+#copyright{
+	color:#FFF;
+	font-size:10px;
+	text-align:center;
+	width:100%;
+	font-family:Tahoma, Microsoft YaHei;
+	bottom:5px;
+	opacity:0.3;
+}
+#copyright a{
+	color:#FFF;
+	text-decoration:none;
+}
+#copyright a:hover{
+	text-decoration:underline;
 }
 </style>
 </head>
@@ -20,6 +36,7 @@
 		<canvas id="canvas1"></canvas>
 		<canvas id="canvas2"></canvas>
 		<canvas id="canvas3"></canvas>
+        <div id="copyright">Copyright&nbsp;&copy;&nbsp;2017 吴颖琳版权所有&nbsp;<a href="http://www.miitbeian.gov.cn">粤ICP备17074720号-1</a></div>
     </div>
 </body>
 <script src="index/js/commonFunction.js" language="javascript" type="text/javascript"></script>
