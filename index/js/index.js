@@ -36,6 +36,13 @@ window.onload = function() {
 	main();
 }
 
+window.onresize = function() {
+	windowWidth = document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth;
+	windowHeight = document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight;
+	init();
+	main();
+}
+
 
 function init() {
 	lastTime = Date.now();
