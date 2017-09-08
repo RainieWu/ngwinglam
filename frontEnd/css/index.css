@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+#package{
+	overflow:hidden;
+	position:relative;
+}
+
+#content{
+	width:100%;
+	overflow:hidden;
+	position:absolute;
+}
+
+#project1{
+	background-color:#fece02;
+}
+
+#project2{
+	background-color:#ffffff;
+}
+
+#project3{
+	background-color:#2d2d2d;
+}
+
+.picArea{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+.textArea{
+	width:35%;
+	height:100%;
+	float:right;
+	color:#FFF;
+	padding-left:5%;
+	padding-right:10%;
+	background:-webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+	background:-moz-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+	background:-o-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+	background:linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+	
+	display:table;
+}
+
+.picArea img{
+	display:block;
+	margin:auto;
+}
+
+.textArea .text{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.textArea .text h1, .textArea .text h3{
+	display:inline-block;
+	border-bottom:5px solid rgba(255, 255, 255, 0.3);
+}
+
+.textArea .text h3{
+	margin-top:20px;
+}
+
+.textArea .text p{
+	margin-top:10px;
+}
+
+.textArea .text p a{
+	color:#FFF;
+}
