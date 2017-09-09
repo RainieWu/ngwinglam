@@ -5,11 +5,15 @@
 	padding:0;
 }
 
+
+/* 可视范围 */
 #package{
 	overflow:hidden;
 	position:relative;
 }
 
+
+/* 焦点 */
 #point{
 	position:absolute;
 	width:24px;
@@ -26,6 +30,7 @@
 	margin:9px;
 	cursor:pointer;
 	
+	/* 焦点变小动画 */
 	animation:toSmall 0.2s;
 	-moz-animation:toSmall 0.2s;
 	-webkit-animation:toSmall 0.2s;
@@ -37,6 +42,7 @@
 	height:12px;
 	margin:6px;
 	
+	/* 焦点变大动画 */
 	animation:toBig 0.2s;
 	-moz-animation:toBig 0.2s;
 	-webkit-animation:toBig 0.2s;
@@ -55,12 +61,15 @@
 	-o-animation:none;
 }
 
+
+/* 项目内容 */
 #content{
 	width:100%;
 	overflow:hidden;
 	position:absolute;
 }
 
+/* 项目背景颜色 */
 #project1{
 	background-color:#fece02;
 }
@@ -85,6 +94,8 @@
 	background-color:#c00000;
 }
 
+
+/* 项目图片部分 */
 .picArea{
 	width:50%;
 	height:100%;
@@ -96,6 +107,8 @@
 	margin:auto;
 }
 
+
+/* 项目文字部分 */
 .textArea{
 	width:35%;
 	height:100%;
@@ -103,19 +116,25 @@
 	color:#FFF;
 	padding-left:5%;
 	padding-right:10%;
+	
+	/* 多行文字垂直居中_1 */
+	display:table;
+	
+	/* 透明度渐变背景 */
 	background:rgba(0, 0, 0, 0.2);
 	background:-webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 	background:-moz-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 	background:-o-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 	background:linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
-	display:table;
 }
 
 .textArea .text{
+	/* 多行文字垂直居中_2 */
 	display:table-cell;
 	vertical-align:middle;
 }
 
+/* 文字动画 */
 .textArea .textAnimation{
 	animation:text 1s;
 	-moz-animation:text 1s;
@@ -140,6 +159,8 @@
 	color:#FFF;
 }
 
+
+/* 焦点变大动画 */
 @keyframes toBig{
 	from{width:6px; height:6px; margin:9px;}
 	to{width:12px; height:12px; margin:6px;}
@@ -157,6 +178,7 @@
 	to{width:12px; height:12px; margin:6px;}
 }
 
+/* 焦点变小动画 */
 @keyframes toSmall{
 	from{width:12px; height:12px; margin:6px;}
 	to{width:6px; height:6px; margin:9px;}
@@ -174,6 +196,7 @@
 	to{width:6px; height:6px; margin:9px;}
 }
 
+/* 文字动画 */
 @keyframes text{
 	0%{font-size:100%; padding:0;}
 	65%{font-size:90.2%; padding:0 5%;}
