@@ -12,6 +12,9 @@ var project = new Array(num);
 var picture = new Array(num);
 var picWidth = new Array(num);
 
+// 文字数组
+var text = new Array(num);
+
 var package;
 var content;
 
@@ -31,6 +34,8 @@ window.onload = function() {
 		
 		picture[i] = project[i].getElementsByTagName("img")[0];
 		picWidth[i] = picture[i].width;
+		
+		text[i] = project[i].getElementsByClassName("text")[0];
 		
 		points[i] = document.getElementById("point" + i);
 		points[i].addEventListener("click", function() {
@@ -119,15 +124,17 @@ function change() {
 	for(var i = 1; i <= num; i++) {
 		if(i != index) {
 			points[i].className = "";
+			text[i].className = "text";
 		}
 		points[index].className = "active";
+		text[index].className = "text textAnimation";
 	}
 	
-	clearInterval(timer);
 	var currentTop = content.offsetTop;
 	var targetTop = -windowHeight * (index - 1);
-	var delta = Math.abs(currentTop - targetTop) / 50;
-	console.log(delta);
+	var delta = Math.abs(currentTop - targetTop) / 20;
+	
+	clearInterval(timer);
 	timer = setInterval(function() {
 		if(currentTop > targetTop) {
 			content.style.top = parseInt(content.style.top) - delta + "px";
@@ -144,5 +151,5 @@ function change() {
 			clearInterval(timer);
 			timer = null;
 		}
-	}, 10);
+	}, 30);
 }

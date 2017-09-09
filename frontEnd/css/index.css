@@ -27,9 +27,9 @@
 	cursor:pointer;
 	
 	animation:toSmall 0.2s;
-	-moz-animation:toSmall 0.2s;	/* Firefox */
-	-webkit-animation:toSmall 0.2s;	/* Safari 和 Chrome */
-	-o-animation:toSmall 0.2s;	/* Opera */
+	-moz-animation:toSmall 0.2s;
+	-webkit-animation:toSmall 0.2s;
+	-o-animation:toSmall 0.2s;
 }
 
 #point span:hover{
@@ -38,9 +38,9 @@
 	margin:6px;
 	
 	animation:toBig 0.2s;
-	-moz-animation:toBig 0.2s;	/* Firefox */
-	-webkit-animation:toBig 0.2s;	/* Safari 和 Chrome */
-	-o-animation:toBig 0.2s;	/* Opera */
+	-moz-animation:toBig 0.2s;
+	-webkit-animation:toBig 0.2s;
+	-o-animation:toBig 0.2s;
 }
 
 #point .active, #point .active:hover{
@@ -102,6 +102,14 @@
 .textArea .text{
 	display:table-cell;
 	vertical-align:middle;
+	
+}
+
+.textArea .textAnimation{
+	animation:text 1s;
+	-moz-animation:text 1s;
+	-webkit-animation:text 1s;
+	-o-animation:text 1s;
 }
 
 .textArea .text h1, .textArea .text h3{
@@ -121,44 +129,57 @@
 	color:#FFF;
 }
 
-@keyframes toBig
-{
-from {width:6px; height:6px; margin:9px;}
-to {width:12px; height:12px; margin:6px;}
+@keyframes toBig{
+	from{width:6px; height:6px; margin:9px;}
+	to{width:12px; height:12px; margin:6px;}
 }
-@-moz-keyframes toBig /* Firefox */
-{
-from {width:6px; height:6px; margin:9px;}
-to {width:12px; height:12px; margin:6px;}
+@-moz-keyframes toBig{
+	from{width:6px; height:6px; margin:9px;}
+	to{width:12px; height:12px; margin:6px;}
 }
-@-webkit-keyframes toBig /* Safari 和 Chrome */
-{
-from {width:6px; height:6px; margin:9px;}
-to {width:12px; height:12px; margin:6px;}
+@-webkit-keyframes toBig{
+	from{width:6px; height:6px; margin:9px;}
+	to{width:12px; height:12px; margin:6px;}
 }
-@-o-keyframes toBig /* Opera */
-{
-from {width:6px; height:6px; margin:9px;}
-to {width:12px; height:12px; margin:6px;}
+@-o-keyframes toBig{
+	from{width:6px; height:6px; margin:9px;}
+	to{width:12px; height:12px; margin:6px;}
 }
 
-@keyframes toSmall
-{
-from {width:12px; height:12px; margin:6px;}
-to {width:6px; height:6px; margin:9px;}
+@keyframes toSmall{
+	from{width:12px; height:12px; margin:6px;}
+	to{width:6px; height:6px; margin:9px;}
 }
-@-moz-keyframes toSmall /* Firefox */
-{
-from {width:12px; height:12px; margin:6px;}
-to {width:6px; height:6px; margin:9px;}
+@-moz-keyframes toSmall{
+	from{width:12px; height:12px; margin:6px;}
+	to{width:6px; height:6px; margin:9px;}
 }
-@-webkit-keyframes toSmall /* Safari 和 Chrome */
-{
-from {width:12px; height:12px; margin:6px;}
-to {width:6px; height:6px; margin:9px;}
+@-webkit-keyframes toSmall{
+	from{width:12px; height:12px; margin:6px;}
+	to{width:6px; height:6px; margin:9px;}
 }
-@-o-keyframes toSmall /* Opera */
-{
-from {width:12px; height:12px; margin:6px;}
-to {width:6px; height:6px; margin:9px;}
+@-o-keyframes toSmall{
+	from{width:12px; height:12px; margin:6px;}
+	to{width:6px; height:6px; margin:9px;}
+}
+
+@keyframes text{
+	0%{font-size:100%; padding:0;}
+	65%{font-size:90.2%; padding:0 5%;}
+	100%{font-size:100%; padding:0;}
+}
+@-moz-keyframes text{
+	0%{font-size:100%; padding:0;}
+	65%{font-size:90.2%; padding:0 5%;}
+	100%{font-size:100%; padding:0;}
+}
+@-webkit-keyframes text{
+	0%{font-size:100%; padding:0;}
+	65%{font-size:90.2%; padding:0 5%;}
+	100%{font-size:100%; padding:0;}
+}
+@-o-keyframes text{
+	0%{font-size:100%; padding:0;}
+	65%{font-size:90.2%; padding:0 5%;}
+	100%{font-size:100%; padding:0;}
 }
