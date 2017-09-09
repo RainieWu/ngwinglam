@@ -22,6 +22,9 @@ var points = new Array(num);
 // 索引
 var index = 1;
 
+// 计时器
+var timer;
+
 window.onload = function() {
 	for(var i = 1; i <= num; i++) {
 		project[i] = document.getElementById("project" + i);
@@ -32,7 +35,10 @@ window.onload = function() {
 		points[i] = document.getElementById("point" + i);
 		points[i].addEventListener("click", function() {
 			index = this.getAttribute("index");
-			change();
+			if(!timer) {
+				change();
+			}
+			//change();
 		});
 	}
 	
@@ -91,13 +97,21 @@ function mouseScroll(e) {
 		if(index < 1) {
 			index = 1;
 		}
-		change();
+		//console.log(timer);
+		if(!timer) {
+			change();
+		}
+		//change();
 	} else if(upOrDown < 0) {
 		index ++;
 		if(index > num) {
 			index = num;
 		}
-		change();
+		//console.log(timer);
+		if(!timer) {
+			change();
+		}
+		//change();
 	}
 }
 
@@ -108,5 +122,27 @@ function change() {
 		}
 		points[index].className = "active";
 	}
-	content.style.top = -windowHeight * (index - 1) + "px";
+	
+	clearInterval(timer);
+	var currentTop = content.offsetTop;
+	var targetTop = -windowHeight * (index - 1);
+	var delta = Math.abs(currentTop - targetTop) / 50;
+	console.log(delta);
+	timer = setInterval(function() {
+		if(currentTop > targetTop) {
+			content.style.top = parseInt(content.style.top) - delta + "px";
+			if(parseInt(content.style.top) < targetTop) {
+				content.style.top = targetTop + "px";
+			}
+		} else if(currentTop < targetTop) {
+			content.style.top = parseInt(content.style.top) + delta + "px";
+			if(parseInt(content.style.top) > targetTop) {
+				content.style.top = targetTop + "px";
+			}
+		}
+		if(parseInt(content.style.top) == targetTop) {
+			clearInterval(timer);
+			timer = null;
+		}
+	}, 10);
 }
