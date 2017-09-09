@@ -73,6 +73,18 @@
 	background-color:#2d2d2d;
 }
 
+#project4{
+	background-color:#563e7c;
+}
+
+#project5{
+	background-color:#01062c;
+}
+
+#project6{
+	background-color:#c00000;
+}
+
 .picArea{
 	width:50%;
 	height:100%;
@@ -102,7 +114,6 @@
 .textArea .text{
 	display:table-cell;
 	vertical-align:middle;
-	
 }
 
 .textArea .textAnimation{

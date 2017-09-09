@@ -3,7 +3,7 @@ var windowWidth;
 var windowHeight;
 
 // 项目数量
-var num = 3;
+var num = 6;
 
 // 项目数组
 var project = new Array(num);
@@ -39,11 +39,10 @@ window.onload = function() {
 		
 		points[i] = document.getElementById("point" + i);
 		points[i].addEventListener("click", function() {
-			index = this.getAttribute("index");
 			if(!timer) {
+				index = this.getAttribute("index");
 				change();
 			}
-			//change();
 		});
 	}
 	
@@ -98,25 +97,21 @@ function mouseScroll(e) {
 	}
 	
 	if(upOrDown > 0) {
-		index --;
-		if(index < 1) {
-			index = 1;
-		}
-		//console.log(timer);
 		if(!timer) {
+			index --;
+			if(index < 1) {
+				index = 1;
+			}
 			change();
 		}
-		//change();
 	} else if(upOrDown < 0) {
-		index ++;
-		if(index > num) {
-			index = num;
-		}
-		//console.log(timer);
 		if(!timer) {
+			index ++;
+			if(index > num) {
+				index = num;
+			}
 			change();
 		}
-		//change();
 	}
 }
 
