@@ -39,7 +39,6 @@ window.onload = function() {
 	init();
 	
 	
-	
 }
 
 // 鼠标滚动事件
@@ -70,6 +69,8 @@ function init() {
 	content.style.height = windowHeight * num + "px";
 	content.style.top = -windowHeight * (index - 1) + "px";
 	
+	point.style.top = (windowHeight - point.offsetHeight) / 2 + "px";
+	
 	points[index].className = "active";
 }
 
@@ -83,18 +84,30 @@ function mouseScroll(e) {
 	
 	if(upOrDown > 0) {
 		index --;
-		content.style.top = parseInt(content.style.top) + windowHeight + "px";
+		if(index < 1) {
+			index = 1;
+		}
+		change();
 	} else if(upOrDown < 0) {
 		index ++;
-		content.style.top = parseInt(content.style.top) - windowHeight + "px";
+		if(index > num) {
+			index = num;
+		}
+		change();
 	}
 }
 
 function changePoint() {
-	for(var i = 1; i <= num; i++) {
-		points[i].className = "";
-	}
-	this.className = "active";
 	index = this.getAttribute("index");
+	change();
+}
+
+function change() {
+	for(var i = 1; i <= num; i++) {
+		if(i != index) {
+			points[i].className = "";
+		}
+		points[index].className = "active";
+	}
 	content.style.top = -windowHeight * (index - 1) + "px";
 }
