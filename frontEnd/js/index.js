@@ -19,6 +19,7 @@ var content;
 var point;
 var points = new Array(num);
 
+// 索引
 var index = 1;
 
 window.onload = function() {
@@ -29,7 +30,10 @@ window.onload = function() {
 		picWidth[i] = picture[i].width;
 		
 		points[i] = document.getElementById("point" + i);
-		points[i].addEventListener("click", changePoint);
+		points[i].addEventListener("click", function() {
+			index = this.getAttribute("index");
+			change();
+		});
 	}
 	
 	package = document.getElementById("package");
@@ -95,11 +99,6 @@ function mouseScroll(e) {
 		}
 		change();
 	}
-}
-
-function changePoint() {
-	index = this.getAttribute("index");
-	change();
 }
 
 function change() {

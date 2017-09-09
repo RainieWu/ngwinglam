@@ -25,12 +25,22 @@
 	border-radius:12px;
 	margin:9px;
 	cursor:pointer;
+	
+	animation:toSmall 0.2s;
+	-moz-animation:toSmall 0.2s;	/* Firefox */
+	-webkit-animation:toSmall 0.2s;	/* Safari 和 Chrome */
+	-o-animation:toSmall 0.2s;	/* Opera */
 }
 
 #point span:hover{
 	width:12px;
 	height:12px;
 	margin:6px;
+	
+	animation:toBig 0.2s;
+	-moz-animation:toBig 0.2s;	/* Firefox */
+	-webkit-animation:toBig 0.2s;	/* Safari 和 Chrome */
+	-o-animation:toBig 0.2s;	/* Opera */
 }
 
 #point .active, #point .active:hover{
@@ -38,6 +48,11 @@
 	height:12px;
 	border:6px solid rgba(0, 0, 0, 0.65);
 	margin:0;
+	
+	animation:none;
+	-moz-animation:none;
+	-webkit-animation:none;
+	-o-animation:none;
 }
 
 #content{
@@ -64,6 +79,11 @@
 	float:left;
 }
 
+.picArea img{
+	display:block;
+	margin:auto;
+}
+
 .textArea{
 	width:35%;
 	height:100%;
@@ -77,11 +97,6 @@
 	background:-o-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 	background:linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 	display:table;
-}
-
-.picArea img{
-	display:block;
-	margin:auto;
 }
 
 .textArea .text{
@@ -104,4 +119,46 @@
 
 .textArea .text p a{
 	color:#FFF;
+}
+
+@keyframes toBig
+{
+from {width:6px; height:6px; margin:9px;}
+to {width:12px; height:12px; margin:6px;}
+}
+@-moz-keyframes toBig /* Firefox */
+{
+from {width:6px; height:6px; margin:9px;}
+to {width:12px; height:12px; margin:6px;}
+}
+@-webkit-keyframes toBig /* Safari 和 Chrome */
+{
+from {width:6px; height:6px; margin:9px;}
+to {width:12px; height:12px; margin:6px;}
+}
+@-o-keyframes toBig /* Opera */
+{
+from {width:6px; height:6px; margin:9px;}
+to {width:12px; height:12px; margin:6px;}
+}
+
+@keyframes toSmall
+{
+from {width:12px; height:12px; margin:6px;}
+to {width:6px; height:6px; margin:9px;}
+}
+@-moz-keyframes toSmall /* Firefox */
+{
+from {width:12px; height:12px; margin:6px;}
+to {width:6px; height:6px; margin:9px;}
+}
+@-webkit-keyframes toSmall /* Safari 和 Chrome */
+{
+from {width:12px; height:12px; margin:6px;}
+to {width:6px; height:6px; margin:9px;}
+}
+@-o-keyframes toSmall /* Opera */
+{
+from {width:12px; height:12px; margin:6px;}
+to {width:6px; height:6px; margin:9px;}
 }
