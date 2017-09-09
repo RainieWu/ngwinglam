@@ -106,5 +106,17 @@ function mouseMove(e) {
 	if(e.offSetX || e.layerX) {
 		mouseX = e.offSetX == undefined ? e.layerX : e.offSetX;
 		mouseY = e.offSetY == undefined ? e.layerY : e.offSetY;
+		
+		if((mouseX - windowWidth / 2) * (mouseX - windowWidth / 2) + (mouseY - windowHeight / 2) * (mouseY - windowHeight / 2) < (mainStar.width / 2) * (mainStar.width / 2)) {
+			this.style.cursor = "pointer";
+			this.addEventListener("click", function() {
+				window.location.href = "frontEnd/index.html";
+			});
+		} else {
+			this.style.cursor = "default";
+			this.addEventListener("click", function() {
+				window.location.href = window.location.href;
+			});
+		}
 	}
 }
