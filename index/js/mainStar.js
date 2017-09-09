@@ -7,7 +7,7 @@ var mainStarObj = function() {
 
 mainStarObj.prototype.init = function() {
 	this.image = new Image();
-	this.image.src = "index/images/mainStar.png";
+	this.image.src = "index/img/mainStar.png";
 	this.width = "400";
 	this.height = "400";
 	this.rotation = 0;

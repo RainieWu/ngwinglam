@@ -12,7 +12,7 @@ flashStarObj.prototype.num = 10;
 flashStarObj.prototype.init = function() {
 	for(var i = 1; i <= 6; i ++) {
 		this.image[i] = new Image();
-		this.image[i].src = "index/images/flashStar" + i + ".png";
+		this.image[i].src = "index/img/flashStar" + i + ".png";
 	}
 	
 	for(var i = 0; i < this.num; i ++) {

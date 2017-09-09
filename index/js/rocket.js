@@ -9,7 +9,7 @@ var rocketObj = function() {
 
 rocketObj.prototype.init = function() {
 	this.image = new Image();
-	this.image.src = "index/images/rocket.png";
+	this.image.src = "index/img/rocket.png";
 	this.radiu = mainStar.width / 2;
 	this.offset = 20;
 	this.x = this.radiu + this.offset;

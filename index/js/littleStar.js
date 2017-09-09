@@ -8,7 +8,7 @@ littleStarObj.prototype.num = 100;
 
 littleStarObj.prototype.init = function() {
 	this.image = new Image();
-	this.image.src = "index/images/littleStar.png";
+	this.image.src = "index/img/littleStar.png";
 	
 	for(var i = 0; i < this.num; i ++) {
 		this.x[i] = Math.random() * windowWidth;
