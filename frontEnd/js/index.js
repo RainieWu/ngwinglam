@@ -48,6 +48,9 @@ window.onresize = function() {
 document.addEventListener("DOMMouseScroll", mouseScroll);	/*Firefox浏览器*/
 document.addEventListener("mousewheel", mouseScroll);		/*其他浏览器*/
 
+// 监听键盘事件
+document.addEventListener("keydown", keydown);
+
 
 // 获取元素
 function getElements() {
@@ -108,28 +111,51 @@ function mouseScroll(e) {
 	
 	// 鼠标向上滚动
 	if(upOrDown > 0) {
-		if(!timer) {
-			index --;
-			if(index < 1) {
-				index = num;
-			}
-			change();
-		}
+		up();
 	}
 	// 鼠标向下滚动
 	else if(upOrDown < 0) {
-		if(!timer) {
-			index ++;
-			if(index > num) {
-				index = 1;
-			}
-			change();
+		down();
+	}
+}
+
+// 键盘事件
+function keydown(e) {
+	// 上键
+	if(e.keyCode == 38) {
+		up();
+	}
+	// 下键
+	else if(e.keyCode == 40) {
+		down();
+	}
+}
+
+// 向上翻页
+function up() {
+	if(!timer) {
+		index --;
+		if(index < 1) {
+			index = num;
 		}
+		change();
+	}
+}
+
+// 向下翻页
+function down() {
+	if(!timer) {
+		index ++;
+		if(index > num) {
+			index = 1;
+		}
+		change();
 	}
 }
 
 // 改变焦点及可视内容
 function change() {
+	// 改变焦点及添加文字动画
 	for(var i = 1; i <= num; i++) {
 		if(i != index) {
 			points[i].className = "";
@@ -139,6 +165,7 @@ function change() {
 		text[index].className = "text textAnimation";
 	}
 	
+	// 改变可视内容（翻页动画）
 	var currentTop = content.offsetTop;
 	var targetTop = -windowHeight * (index - 1);
 	var delta = Math.abs(currentTop - targetTop) / 20;
