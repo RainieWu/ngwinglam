@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>bootstrap</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+        	<span class="glyphicon glyphicon-send"></span><span class="glyphicon glyphicon-send logo2"></span><span class="glyphicon glyphicon-send logo3"></span>
+        </a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">首页</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">产品<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">产品1</a></li>
+              <li><a href="#">产品2</a></li>
+              <li><a href="#">产品3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">简介</a></li>
+          <li><a href="#">关于</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+      <li data-target="#carousel" data-slide-to="3"></li>
+      <li data-target="#carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+    	<div class="item active"><img src="images/1.jpg"></div>
+    	<div class="item"><img src="images/2.jpg"></div>
+    	<div class="item"><img src="images/3.jpg"></div>
+    	<div class="item"><img src="images/4.jpg"></div>
+    	<div class="item"><img src="images/5.jpg"></div>
+    </div>
+    <a href="#carousel" class="carousel-control left" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#carousel" class="carousel-control right" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+  
+  <div class="container">
+  	<div class="intro">
+      <h1>Bootstrap简介</h1>
+      <p>Bootstrap是由Twitter公司的两名技术工程师研发的一个基于HTML、CSS、JavaScript的开源框架。该框架代码简洁、视觉优美，可用于快速、简单地构建基于PC及移动端设备的Web页面需求。2010年6月，Twitter内部的工程师为了解决前端开发任务中的协作统一问题。经历各种方案后，Bootstrap最终被确定下来，并于2011年8月发布。经过很长时间的迭代升级，由最初的CSS驱动项目发展成为内置很多JavaScript插件和图标的多功能Web前端的开源框架。Bootstrap最为重要的部分就是它的响应式布局，通过这种布局可以兼容PC端、PAD以及手机移动端的页面访问。</p>
+    </div>
+  
+  	<hr>
+  
+  	<div class="row">
+      <div class="col-sm-6">
+      	<div class="media">
+          <div class="media-left">
+            <a href="#"><img class="media-object img-circle" src="images/0.jpg"></a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">删除的文本</h4>
+            <p>跨设备、跨浏览器，可以兼容所有现代浏览器，包括比较诟病的IE7、IE8。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+      	<div class="media">
+          <div class="media-left">
+            <a href="#"><img class="media-object img-circle" src="images/0.jpg"></a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">无用的文本</h4>
+            <p>响应式布局不但可以支持PC端的各种分辨率的显示，还支持移动端PAD、手机等屏幕的响应式切换显示。</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+      <div class="col-sm-6">
+      	<div class="media">
+          <div class="media-left">
+            <a href="#"><img class="media-object img-circle" src="images/0.jpg"></a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">插入的文本</h4>
+            <p>提供的全面的组件Bootstrap提供了实用性很强的组件，包括导航、标签、工具条、按钮等一系列组件，方便开发者调用。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+      	<div class="media">
+          <div class="media-left">
+            <a href="#"><img class="media-object img-circle" src="images/0.jpg"></a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">下划线文本</h4>
+            <p>内置jQuery插件Bootstrap提供了很多实用性的jquery插件，这些插件方便开发实现Web中各种常规特效。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <div class="row part3">
+      <div class="col-sm-6 part3-img1">
+      	<img class="img-responsive img-thumbnail" src="images/6.jpg">
+      </div>
+      <div class="col-sm-6 part3-text1">
+      	<h3>媒体对象</h3>
+        <p>这些抽象的对象样式用于创建各种类型的组件，我们可以在组件中使用图文混排，图像可以左对齐或者右对齐。媒体对象可以用更少的代码来实现媒体对象与文字的混排。</p>
+      </div>
+      <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+      <div class="col-sm-6 part3-img2">
+      	<img class="img-responsive img-thumbnail" src="images/6.jpg">
+      </div>
+      <div class="col-sm-6 part3-text2">
+      	<h3>小图标组件</h3>
+        <p>Bootstrap提供了免费的二百多个小图标，具体可以参考中文官网的组件部分。</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+  	<div class="container">
+      <p><a href="">举报</a> | <a href="">免责声明</a> | <a href="">版权申诉</a></p>
+      <p class="copyright">京ICP备10035154号-15 / 京公网安备11010802008710</p>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery.js" language="javascript" type="text/javascript"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/part3.js" language="javascript" type="text/javascript">
+</script>
+</html>

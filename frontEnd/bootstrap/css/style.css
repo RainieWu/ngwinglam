@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@media (max-width: 768px) {
+.intro h1{
+	font-size:18px;
+}
+.intro p{
+	font-size:12px;
+}
+.col-sm-6 p{
+	font-size:12px;
+}
+.media-object{
+	width:80px;
+}
+.media-heading{
+	font-size:14px;
+}
+.part3 h3{
+	font-size:16px;
+	font-weight:bold;
+}
+.part3-img1{
+	left:0;
+}
+.part3-text1{
+	right:0;
+}
+footer p, footer p a{
+	font-size:10px;
+}
+footer .copyright{
+	font-size:8px;
+}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+.intro h1{
+	font-size:24px;
+}
+.media-object{
+	width:100px;
+}
+.part3-img1{
+	left:50%;
+}
+.part3-text1{
+	right:50%;
+}
+footer .copyright{
+	font-size:12px;
+}
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+.intro h1{
+	font-size:30px;
+}
+.media-object{
+	width:100px;
+}
+.part3-img1{
+	left:50%;
+}
+.part3-text1{
+	right:50%;
+}
+footer .copyright{
+	font-size:12px;
+}
+}
+@media (min-width: 1200px) {
+.intro h1{
+	font-size:36px;
+}
+.media-object{
+	width:100px;
+}
+.part3-img1{
+	left:50%;
+}
+.part3-text1{
+	right:50%;
+}
+footer .copyright{
+	font-size:12px;
+}
+}
+*{
+	font-family:Tahoma, Microsoft YaHei;
+}
+.logo2{
+	opacity:0.8;
+}
+.logo3{
+	opacity:0.5;
+}
+.carousel{
+	margin-top:50px
+}
+.carousel img{
+	margin:auto;
+}
+.intro{
+	text-align:center;
+	margin-bottom:20px;
+}
+.intro h1{
+	letter-spacing:2px;
+	font-weight:bold;
+}
+.intro p, .part3 p{
+	text-indent:28px;
+	line-height:28px;
+}
+.col-sm-6{
+	margin-top:10px;
+}
+.media{
+	padding:10px;
+}
+.media-heading{
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.media-body p{
+	line-height:22px;
+}
+.part3{
+	text-align:center;
+}
+.part3 .img-responsive{
+	margin:auto;
+}
+footer{
+	background-color:#F8F8F8;
+	border-top:1px solid #E7E7E7;
+	margin-top:30px;
+	padding-top:20px;
+	padding-bottom:10px;
+	text-align:center;
+}
+footer a{
+	color:#333;
+}
+footer a:hover{
+	color:#333;
+}
